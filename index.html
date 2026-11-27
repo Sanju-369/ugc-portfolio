@@ -8,177 +8,154 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#about">Skip to content</a>
 <header class="shell top">
- <a class="monogram" href="#home">Sanjay Kumar Mishra</a>
- <nav aria-label="Main navigation"><a href="#featured">Videos</a><a href="#services">Services</a><a href="#social-work">Social work</a><a href="#contact">Contact</a></nav>
+ <a class="monogram" href="#about">Sanjay Kumar Mishra</a>
+ <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Videos</a><a href="#social-work">Social work</a><a href="#contact">Contact</a></nav>
 </header>
 <main class="shell" id="home">
-<section class="hero" aria-labelledby="headline">
- <div class="hero-copy">
-  <p class="label">Available for full-time &amp; freelance</p>
-  <h1 id="headline">AI video maker <span>for ads &amp; social</span></h1>
-  <p>I make UGC-style product ads, cinematic AI videos, and short-form edits for Reels and Shorts.</p>
-  <div class="actions"><a class="button" href="mailto:sm3129914@gmail.com">Email Sanjay</a><a class="button outline" href="#work">Browse all work</a></div>
- </div>
- <section class="featured" id="featured" aria-labelledby="featured-title">
-  <h2 id="featured-title">Featured work</h2>
-  <div class="grid">
-<article class="film">
-    <video controls playsinline preload="none" poster="short-form/nov25-morning.jpg" src="short-form/nov25-morning.mp4" aria-label="Paper-cut skincare pitch"></video>
-    <div class="caption"><p class="label">Animated beauty ad · 10 sec</p><h3>Paper-cut skincare pitch</h3></div>
-   </article>
-   <article class="film">
-   <video controls playsinline preload="none" poster="short-form/11.04.32.jpg" src="short-form/11.04.32.mp4" aria-label="Hands-on lotion demo"></video>
-   <div class="caption"><p class="label">UGC product demo</p><h3>Hands-on lotion demo</h3></div>
-  </article>
-   <article class="film">
-   <video controls playsinline preload="none" poster="short-form/10.58.07.jpg" src="short-form/10.58.07.mp4" aria-label="Retro demo with a sci-fi reveal"></video>
+ <section class="hero" id="about" aria-labelledby="headline">
+  <div class="hero-copy">
+   <div class="identity">
+    <img class="portrait" src="portrait.png" width="463" height="416" alt="Portrait of Sanjay Kumar Mishra">
+    <div><p class="label">About me</p><p class="creator-name">Sanjay Kumar Mishra</p></div>
+   </div>
+   <h1 id="headline">AI video creator <em>&amp; editor</em></h1>
+   <p class="bio">I make UGC-style ads, cinematic product videos, and short-form edits for Reels and Shorts. I’m looking for full-time roles in AI video production, editing, motion graphics, and filmmaking.</p>
+   <div class="actions"><a class="button" href="#work">Browse videos</a><a class="button outline" href="mailto:sm3129914@gmail.com">Email me</a></div>
+  </div>
+  <div class="featured" id="featured" aria-label="Featured retro ad">
+   <p class="label">Featured ad</p>
+   <article class="film hero-film">
+   <video controls playsinline preload="none" poster="short-form/10.58.07.jpg" src="short-form/10.58.07.mp4" aria-label="Featured retro skincare ad"></video>
    <div class="caption"><p class="label">Cinematic product ad</p><h3>Retro demo with a sci-fi reveal</h3></div>
   </article>
   </div>
  </section>
-</section>
-<section class="about" id="about" aria-labelledby="about-title">
- <img class="portrait" src="portrait.png" width="463" height="416" alt="Portrait of Sanjay Kumar Mishra" loading="lazy">
- <div><h2 id="about-title">About me</h2><p>I’m Sanjay Kumar Mishra, an AI video maker focused on UGC-style ads and short-form video. I’m open to full-time roles and freelance projects in AI video production, motion graphics, video editing, and filmmaking.</p></div>
-</section>
-<section class="work short-form" id="work" aria-labelledby="short-form-title">
- <div class="section-heading"><h2 id="short-form-title">Short-form ad gallery</h2><p>Product demos, presenter-led ads, and cinematic edits</p></div>
- <div class="grid">
-  <article class="film">
+ <section class="work" id="work" aria-labelledby="work-title">
+  <div class="section-heading"><div><h2 id="work-title">Video portfolio</h2><p>Selected projects include samples from <a href="https://brand-man-9.vercel.app/">Brand Man</a>.</p></div><p id="work-count" aria-live="polite">24 videos</p></div>
+  <div class="filters" aria-label="Filter videos" hidden>
+   <button type="button" data-filter="all" aria-pressed="true">All videos</button>
+   <button type="button" data-filter="ugc" aria-pressed="false">AI UGC</button>
+   <button type="button" data-filter="product" aria-pressed="false">Product ads</button>
+   <button type="button" data-filter="cinematic" aria-pressed="false">Cinematic ads</button>
+   <button type="button" data-filter="animation" aria-pressed="false">Animation</button>
+   <button type="button" data-filter="explainer" aria-pressed="false">Reels &amp; explainers</button>
+  </div>
+  <div class="grid" id="video-grid">
+   <article class="film" data-category="animation">
+    <video controls playsinline preload="none" poster="short-form/nov25-morning.jpg" src="short-form/nov25-morning.mp4" aria-label="Paper-cut skincare pitch"></video>
+    <div class="caption"><p class="label">Animated beauty ad · 10 sec</p><h3>Paper-cut skincare pitch</h3></div>
+   </article>
+   <article class="film" data-category="ugc">
+   <video controls playsinline preload="none" poster="short-form/11.04.32.jpg" src="short-form/11.04.32.mp4" aria-label="Hands-on lotion demo"></video>
+   <div class="caption"><p class="label">UGC product demo</p><h3>Hands-on lotion demo</h3></div>
+  </article>
+   <article class="film" data-category="cinematic">
+   <video controls playsinline preload="none" poster="short-form/10.58.07.jpg" src="short-form/10.58.07.mp4" aria-label="Retro demo with a sci-fi reveal"></video>
+   <div class="caption"><p class="label">Cinematic product ad</p><h3>Retro demo with a sci-fi reveal</h3></div>
+  </article>
+   <article class="film" data-category="animation">
     <video controls playsinline preload="none" poster="short-form/nov25-evening.jpg" src="short-form/nov25-evening.mp4" aria-label="The solar panel and the power bill"></video>
     <div class="caption"><p class="label">Character explainer · 35 sec</p><h3>The solar panel and the power bill</h3></div>
    </article>
-  <article class="film">
+   <article class="film" data-category="ugc">
    <video controls playsinline preload="none" poster="short-form/11.02.54.jpg" src="short-form/11.02.54.mp4" aria-label="Direct-to-camera lotion pitch"></video>
    <div class="caption"><p class="label">Presenter-led ad</p><h3>Direct-to-camera lotion pitch</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/11.03.49.jpg" src="short-form/11.03.49.mp4" aria-label="Retro skit to beauty montage"></video>
    <div class="caption"><p class="label">Beauty ad</p><h3>Retro skit to beauty montage</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="product">
    <video controls playsinline preload="none" poster="short-form/11.02.20.jpg" src="short-form/11.02.20.mp4" aria-label="Mirror-side skincare routine"></video>
    <div class="caption"><p class="label">Beauty reel</p><h3>Mirror-side skincare routine</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="product">
    <video controls playsinline preload="none" poster="short-form/11.01.32.jpg" src="short-form/11.01.32.mp4" aria-label="Warm-lit lotion application"></video>
    <div class="caption"><p class="label">Product demo</p><h3>Warm-lit lotion application</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/10.55.01.jpg" src="short-form/10.55.01.mp4" aria-label="Retro cocoa lotion pitch"></video>
    <div class="caption"><p class="label">Cinematic product ad</p><h3>Retro cocoa lotion pitch</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/10.55.37.jpg" src="short-form/10.55.37.mp4" aria-label="Retro beauty scene with a futuristic reveal"></video>
    <div class="caption"><p class="label">Cinematic product ad</p><h3>Retro beauty scene with a futuristic reveal</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/10.56.29.jpg" src="short-form/10.56.29.mp4" aria-label="Black-and-white lotion demo"></video>
    <div class="caption"><p class="label">Cinematic product demo</p><h3>Black-and-white lotion demo</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/10.57.03.jpg" src="short-form/10.57.03.mp4" aria-label="Retro dialogue with a sci-fi reveal"></video>
    <div class="caption"><p class="label">Cinematic product ad</p><h3>Retro dialogue with a sci-fi reveal</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="ugc">
    <video controls playsinline preload="none" poster="short-form/10.58.54.jpg" src="short-form/10.58.54.mp4" aria-label="Retro skincare skit with an offer"></video>
    <div class="caption"><p class="label">Presenter-led ad</p><h3>Retro skincare skit with an offer</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/11.00.02.jpg" src="short-form/11.00.02.mp4" aria-label="Boardroom skincare skit"></video>
    <div class="caption"><p class="label">Product ad</p><h3>Boardroom skincare skit</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/11.00.51.jpg" src="short-form/11.00.51.mp4" aria-label="Black-and-white beauty close-ups"></video>
    <div class="caption"><p class="label">Cinematic product ad</p><h3>Black-and-white beauty close-ups</h3></div>
   </article>
-<article class="film">
+   <article class="film" data-category="cinematic">
    <video controls playsinline preload="none" poster="short-form/10.53.53.jpg" src="short-form/10.53.53.mp4" aria-label="Retro comedy skincare hook"></video>
    <div class="caption"><p class="label">Product ad</p><h3>Retro comedy skincare hook</h3></div>
   </article>
-  </div>
-</section>
-<section class="work" id="brand-man-work" aria-labelledby="work-title">
- <div class="section-heading"><h2 id="work-title">More video projects</h2><p>AI-generated samples from <a href="https://brand-man-9.vercel.app/">Brand Man</a></p></div>
- <div class="grid"><article class="film">
+   <article class="film" data-category="product">
   <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/fina%20for%20fashion.mp4#t=0.2" aria-label="Fashion Video Ad"></video>
   <div class="caption"><p class="label">Fashion ad</p><h3>Fashion Video Ad</h3><p>A product-focused fashion video.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="product">
   <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/n3.mp4#t=0.2" aria-label="Stainly Tumbler"></video>
   <div class="caption"><p class="label">E-commerce ad</p><h3>Stainly Tumbler</h3><p>A day-in-the-life product ad with bold captions.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="explainer">
   <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/n1.mp4#t=0.2" aria-label="Meet Vaani"></video>
   <div class="caption"><p class="label">Launch reel</p><h3>Meet Vaani</h3><p>A developer-platform launch reel that moves from tangled code to a clean voice interface.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="explainer">
   <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/n2.mp4#t=0.2" aria-label="Power Feels Affordable"></video>
   <div class="caption"><p class="label">Explainer</p><h3>Power Feels Affordable</h3><p>A short explainer built around the moment the bill arrives.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="animation">
   <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/n4.mp4#t=0.2" aria-label="A Story in Cardboard"></video>
   <div class="caption"><p class="label">Character film</p><h3>A Story in Cardboard</h3><p>A stop-motion-style short that follows one character through a night.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="animation">
   <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/v1.mp4#t=0.2" aria-label="The Corn That Wouldn’t Leave"></video>
   <div class="caption"><p class="label">3D character ad</p><h3>The Corn That Wouldn’t Leave</h3><p>A grain of corn becomes a mascot with a story arc.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="animation">
  <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/v3.mp4#t=0.2" aria-label="Soup Bowl Hero"></video>
  <div class="caption"><p class="label">3D character ad</p><h3>Soup Bowl Hero</h3><p>A cold-night ad with the product as the main character.</p></div>
 </article>
-<article class="film">
+   <article class="film" data-category="product">
  <video controls playsinline preload="metadata" src="https://brand-man-9.vercel.app/media/v4.mp4#t=0.2" aria-label="Stop Scrolling, Start Shopping"></video>
  <div class="caption"><p class="label">Product hook</p><h3>Stop Scrolling, Start Shopping</h3><p>An opener for a TikTok Shop-style ad.</p></div>
 </article>
- </div>
-</section>
-<section class="work" id="services" aria-labelledby="services-title">
- <div class="section-heading"><h2 id="services-title">Services</h2><p>Video production and social media management for brands.</p></div>
- <div class="service-grid">
-  <article class="service-card"><h3>AI video ads</h3><p>Hooks, scripts, AI characters, and vertical edits for product ads, UGC-style videos, Reels, and Shorts.</p></article>
-  <article class="service-card"><h3>Organic social content</h3><p>Content design, short videos, publishing, and replies to comments and messages.</p></article>
-  <article class="service-card"><h3>Social media management</h3><p>Content planning, production, posting, community engagement, and monthly reporting.</p></article>
-  <article class="service-card"><h3>Paid ad campaigns</h3><p>Campaign setup and management across Meta, Google Ads, and TikTok.</p></article>
-  <article class="service-card"><h3>YouTube intros</h3><p>Short opening videos tailored to the channel’s topic and style.</p></article>
-  <article class="service-card"><h3>YouTube thumbnails</h3><p>Thumbnail design that communicates the video’s topic and fits the channel’s visual identity.</p></article>
- </div>
- <div class="workflow" aria-labelledby="workflow-title">
-  <h3 id="workflow-title">How we work</h3>
-  <ol>
-   <li><strong>Brief</strong><p>Confirm the product, audience, goal, and platforms.</p></li>
-   <li><strong>Plan</strong><p>Develop hooks, scripts, and a content plan.</p></li>
-   <li><strong>Produce</strong><p>Create visuals and edits, then review the deliverables.</p></li>
-   <li><strong>Publish and report</strong><p>For managed accounts, publish, handle engagement, and report monthly.</p></li>
-  </ol>
- </div>
-</section>
+  </div>
+ </section>
 <section class="work" id="social-work" aria-labelledby="social-title">
  <div class="section-heading"><h2 id="social-title">Social media work</h2><p>Pages we handle on Facebook and Instagram.</p></div>
- <div class="service-grid">
-  <article class="service-card"><h3>Manonanda Solar Energy</h3><div class="actions"><a href="https://www.facebook.com/profile.php?id=61593702283020">Facebook</a><a href="https://www.instagram.com/manonanda_solar_energy/">Instagram</a></div></article>
-  <article class="service-card"><h3>TheCleverHomee</h3><div class="actions"><a href="https://www.facebook.com/TheCleverHomee">Facebook</a></div></article>
-  <article class="service-card"><h3>TheCleverAgro</h3><div class="actions"><a href="https://www.facebook.com/thecleveragro">Facebook</a></div></article>
+ <div class="social-grid">
+  <article class="social-card"><h3>Manonanda Solar Energy</h3><div class="actions"><a href="https://www.facebook.com/profile.php?id=61593702283020">Facebook</a><a href="https://www.instagram.com/manonanda_solar_energy/">Instagram</a></div></article>
+  <article class="social-card"><h3>TheCleverHomee</h3><div class="actions"><a href="https://www.facebook.com/TheCleverHomee">Facebook</a></div></article>
+  <article class="social-card"><h3>TheCleverAgro</h3><div class="actions"><a href="https://www.facebook.com/thecleveragro">Facebook</a></div></article>
  </div>
  <figure class="social-results">
   <figcaption>Reported Facebook Page Insights · 10 Sep to 7 Oct · 28 days</figcaption>
   <dl><div><dt>Page views</dt><dd>12,114</dd></div><div><dt>Engagements</dt><dd>221</dd></div></dl>
  </figure>
 </section>
-<section class="contact" id="contact" aria-labelledby="contact-title"><div><h2 id="contact-title">Let’s work together.</h2><p>Get in touch about a role or a freelance project.</p></div><div class="actions"><a class="button" href="mailto:sm3129914@gmail.com">Email Sanjay</a><a class="button outline" href="https://www.upwork.com/freelancers/~015c43c9dd8cd04db3?mp_source=share">Upwork profile</a></div></section>
+<section class="contact" id="contact" aria-labelledby="contact-title"><div><h2 id="contact-title">Get in touch</h2><p>Get in touch about AI video production, editing, or motion graphics roles.</p></div><div class="actions"><a class="button" href="mailto:sm3129914@gmail.com">Email Sanjay</a><a class="button outline" href="https://www.upwork.com/freelancers/~015c43c9dd8cd04db3?mp_source=share">Upwork profile</a></div></section>
 </main>
 <footer class="shell footer"><span>Sanjay Kumar Mishra</span><a href="mailto:sm3129914@gmail.com">sm3129914@gmail.com</a></footer>
-<script>
-  const films = document.querySelectorAll('video');
-  for (const film of films) {
-    film.addEventListener('play', () => {
-      for (const other of films) {
-        if (other !== film) other.pause();
-      }
-    });
-  }
-</script>
+<script src="portfolio.js" defer></script>
 </body>
 </html>
