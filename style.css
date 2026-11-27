@@ -43,14 +43,27 @@ p { color: var(--muted) }
 .button, .filters button[aria-pressed="true"] { color: #241712; background: var(--accent); border-color: var(--accent) }
 .button.outline, .filters button { color: var(--ink); background: transparent }
 .button:hover, .filters button:hover { border-color: var(--accent) }
-.featured { background: #342824; border: 1px solid #78574b; border-radius: .7rem; padding: .9rem; animation: enter .65s .08s ease-out both }
-.featured > .label { margin-bottom: .6rem }
-.hero-film { display: grid; grid-template-columns: minmax(0, 1fr) }
-.hero-film video { aspect-ratio: 1; max-height: min(50vh, 480px) }
+.featured { min-width: 0; background: #292320; border: 1px solid #78574b; border-radius: .85rem; padding: clamp(.75rem, 2vw, 1.2rem); animation: enter .65s .08s ease-out both }
+.feature-meta { display: flex; justify-content: space-between; gap: .6rem; margin-bottom: .75rem; font-size: .875rem }
+.hero-film { border-color: #54413a }
+.hero-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(.35rem, 1vw, .75rem);
+  padding: clamp(.45rem, 1.6vw, 1.25rem);
+  background: radial-gradient(ellipse at center, #50342d, #171412 74%);
+}
+.hero-stage video { aspect-ratio: 5/9; border-radius: .35rem; max-height: 465px }
+.frame-still { width: 100%; height: auto; aspect-ratio: 5/9; object-fit: cover; border-radius: .35rem; opacity: .76 }
+.first-still { transform: translateY(-12%); animation: frame-in .6s .16s ease-out both }
+.last-still { transform: translateY(12%); animation: frame-in .6s .24s ease-out both }
+.hero-film .caption { padding: 1rem }
+.hero-film .caption h3 { font-size: 1.15rem }
 .work, .contact { border-top: 1px solid var(--line); padding: clamp(1.8rem, 5vw, 4rem) 0 }
 .section-heading { align-items: end; margin-bottom: 1.15rem }
 .section-heading p { margin-top: .45rem }
-.filters { margin-bottom: 1rem }
+.filters { margin-bottom: 1.1rem; padding: .85rem 0; border-block: 1px solid var(--line) }
 .filters button { cursor: pointer }
 .grid, .social-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem }
 .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) }
@@ -60,6 +73,7 @@ p { color: var(--muted) }
 @media (hover: hover) { .grid .film:hover { transform: translateY(-3px); border-color: var(--accent) } }
 video { display: block; width: 100%; aspect-ratio: 5/7; object-fit: contain; background: #10100f }
 .caption, .social-card { padding: .85rem }
+.grid .caption h3 { text-wrap: pretty }
 .caption p, .social-card .actions { margin-top: .4rem }
 .caption .label { margin: 0 0 .3rem }
 .social-card .actions { color: var(--accent) }
@@ -69,14 +83,19 @@ video { display: block; width: 100%; aspect-ratio: 5/7; object-fit: contain; bac
 .contact p { margin-top: .5rem }
 .footer { border-top: 1px solid var(--line); padding: 1rem 0 2rem }
 @keyframes enter { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+@keyframes frame-in { from { opacity: 0 } to { opacity: .76 } }
 @media (max-width: 940px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)) } }
 @media (max-width: 700px) {
   .shell { width: calc(100% - 1.5rem) }
   .hero { grid-template-columns: 1fr }
-  .hero-film video { max-height: 375px }
+  .hero-stage video { max-height: 400px }
   .top, .footer, .contact, .section-heading { align-items: flex-start; flex-direction: column; gap: .55rem }
   .top { padding-block: .75rem }
   .grid, .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+@media (max-width: 480px) {
+  .hero-stage { grid-template-columns: minmax(0, 225px); justify-content: center }
+  .frame-still { display: none }
 }
 @media (max-width: 390px) { .social-grid { grid-template-columns: 1fr } }
 @media (prefers-reduced-motion: reduce) {
