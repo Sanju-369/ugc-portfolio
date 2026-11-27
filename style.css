@@ -92,4 +92,22 @@ video { display: block; width: 100%; aspect-ratio: 4/5; background: #141a35; obj
   .section-heading, .contact, .footer { flex-direction: column; align-items: flex-start; gap: .5rem }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem }
+.service-card { padding: 1.15rem; border: 1px solid var(--line); border-radius: .9rem; background: var(--white) }
+.service-card .actions { margin-top: .8rem; color: var(--blue); font-weight: 700 }
+.workflow, .social-results { margin: 1rem 0 0; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: .9rem; background: #e3e9ff }
+.workflow ol, .social-results dl { display: grid; gap: 1.25rem; margin: 1rem 0 0 }
+.workflow ol { grid-template-columns: repeat(4, minmax(0, 1fr)); padding-inline-start: 1.4rem }
+.workflow li { padding-inline-start: .15rem }
+.workflow li::marker { color: var(--blue); font-weight: 700 }
+.workflow li p { margin: .3rem 0 0 }
+.social-results dl { grid-template-columns: repeat(2, minmax(0, 13rem)) }
+.social-results dd { margin: 0; color: var(--blue); font: 800 clamp(1.6rem, 4vw, 3rem)/1.2 var(--display) }
+@media (max-width: 720px) {
+  .service-grid, .workflow ol { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+@media (max-width: 470px) {
+  .top { flex-wrap: wrap; padding-block: .75rem }
+  .service-grid { grid-template-columns: 1fr }
+}
 
